@@ -1,4 +1,4 @@
-# Migration
+### Migration
 
 ```shell
 rake active_storage:install:migrations
