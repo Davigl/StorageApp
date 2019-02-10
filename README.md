@@ -80,6 +80,6 @@ To change this, you can specify config.active_storage.service to :amazon, :googl
 
 For Amazon S3, you can pass access_key_id, secret_access_key, region, and bucket. For Google Cloud Storage, you can pass project, keyfile, and bucket. For Microsoft Azure Storage, you can pass path, storage_account_name, storage_access_key, and container.
 
-See the generated storage.yml for examples. The credentials should be added using bin/rails credentials:edit. Read our blog post about encrypted credentials on Rails 5.2 here.
+See the generated storage.yml for examples. The credentials should be added using bin/rails credentials:edit.
 
 You also need to add the necessary gem on the Gemfile for your chosen service. This can be aws-sdk-s3, google-cloud-storage, or azure-storage.
