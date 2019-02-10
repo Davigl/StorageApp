@@ -32,7 +32,7 @@ class Comment < ApplicationRecord
 end
 ```
 
-### Example Model Comment
+### Example Comment
 
 ```shell
 class Comment < ApplicationRecord
@@ -41,12 +41,22 @@ end
 ```
 
 ```shell
-  class CommentController < ApplicationController
+class CommentController < ApplicationController
   def create
     comment = Comment.create! params.require(:comment).permit(:content)
     comment.images.attach(params[:comment][:images])
     redirect_to comment    
   end
+end
+```
+
+```shell
+# new.html.erb
+<%= form_with model: @comment, local: true  do |form| %>
+  <%= form.text_area :content %><br><br>
+  <%= form.file_field :images, multiple: true %><br>
+  <%= form.submit %>
+<% end %>
 ```
 
 ### Many Attachments
